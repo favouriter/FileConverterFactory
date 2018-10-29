@@ -31,9 +31,7 @@ public final class FileConverterFactory extends Converter.Factory {
 
     @Override
     public Converter<ResponseBody, ?> responseBodyConverter(Type type, Annotation[] annotations, Retrofit retrofit) {
-        // if (type == File.class) {
-        // return FileResponseBodyConverter.INSTANCE;
-        // }
+        // 来不及了，文件下载就不写了
         return null;
     }
 }
