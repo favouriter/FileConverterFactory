@@ -29,7 +29,7 @@
 ```
 由此我们可以发现，优先级里面能处理的，即时处理，处理不了的，返回NUll然后交给下一个转换器，这样就可以把基本类型给转换了，使用很方面，不用每个参数进行RequestBody创建了
 ## 但是新的问题来了
-基本类型支持，但是他并不支持File直接上传，我们理想中的参数是这样的@Part("image")File image,但是这个没人处理，那么我们就可以通过ScalarsConverterFactory源码自己写一个File转换器，其实很简单，首先我们也创建一个转换器，继承Converter<T, RequestBody>，又耍赖，直接贴代码
+基本类型支持，但是他并不支持File直接上传，我们理想中的参数是这样的@Part("image")File image,但是这个没人处理，那么我们就可以通过ScalarsConverterFactory源码自己写一个File转换器，其实很简单，首先我们也创建一个转换器，继承Converter.Factory，又耍赖，直接贴代码
 ```java
 /**
  * @author favouriter
